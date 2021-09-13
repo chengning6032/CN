@@ -1,0 +1,22 @@
+<!-- footer.html -->
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">
+        {% block footer %}
+            {% if now %}
+                <p style='font-family:微軟正黑體;'>現在時刻：{{now}}</p>
+            {% else %}
+                <p style='font-family:微軟正黑體;'>本文內容取自網路，如有侵權請來信通知下架</p>
+            {% endif %}
+        {% endblock footer %}
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>

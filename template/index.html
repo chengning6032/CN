@@ -1,0 +1,23 @@
+<!--  index.html -->
+{% extends 'base.html' %}
+{% block title %}胡政甯結構技師事務所{% endblock title %}
+{% block aboutme %}
+    <h2 style="text-align:center; padding-bottom:20px;">About Me</h2>
+    <p style="text-align:center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et quia alias aspernatur odit, totam praesentium, laborum
+        corrupti quam explicabo dolorem cum nisi quaerat? Iure voluptatem sequi saepe ducimus optio id!</p>
+{% endblock aboutme %}
+{% block service %}
+    <h2 style="text-align:center; padding-bottom:20px;">Service</h2>
+    <p style="text-align:center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et quia alias aspernatur odit, totam praesentium, laborum
+        corrupti quam explicabo dolorem cum nisi quaerat? Iure voluptatem sequi saepe ducimus optio id!</p>
+{% endblock service %}
+{% block headmessage %}
+    <h2 style="text-align:center; padding-bottom:20px;">Articles</h3>
+{% endblock headmessage %}
+{% block content %}
+{% for post in posts %}
+<p style='font-family:微軟正黑體; font-size:14pt; font-weight:bold;'>
+    <a href='/mainsite/{{post.slug}}'>{{post.subject}}</a>
+</p>
+{% endfor %}
+{% endblock content %}
